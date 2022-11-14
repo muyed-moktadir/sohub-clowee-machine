@@ -7,7 +7,7 @@ import {
   CDropdownMenu,
   CDropdownItem,
   CDropdownToggle,
-  CWidgetStatsA,
+  CWidgetStatsE,
 } from '@coreui/react'
 import { getStyle } from '@coreui/utils'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
@@ -40,7 +40,7 @@ const WidgetsDropdown = () => {
       </CCol> */}
 
       <CCol sm={6} lg={2}>
-        <CWidgetStatsA
+        <CWidgetStatsE
           className="mb-4 text-center muyed"
           style={{ backgroundColor: 'rgba(13,202,240)' }}
           value={
@@ -134,12 +134,12 @@ const WidgetsDropdown = () => {
         />
       </CCol>
       <CCol sm={6} lg={2}>
-        <CWidgetStatsA
+        <CWidgetStatsE
           className="mb-4 text-center h-auto"
           style={{ backgroundColor: 'darkorchid' }}
           value={
             <>
-              <span style={{ color: 'white', marginLeft: '20px' }}>20</span>
+              <span style={{ color: 'white' }}>20</span>
               <h4
                 style={{
                   fontSize: '15px',
@@ -147,7 +147,6 @@ const WidgetsDropdown = () => {
                   overflow: 'hidden',
                   textOverflow: 'clip',
                   color: 'white',
-                  marginLeft: '20px',
                 }}
               >
                 Cloud Chances
@@ -229,7 +228,7 @@ const WidgetsDropdown = () => {
         />
       </CCol>
       <CCol sm={6} lg={2}>
-        <CWidgetStatsA
+        <CWidgetStatsE
           className="mb-4 text-center"
           style={{ backgroundColor: 'rgba(171,71,188)' }}
           value={
@@ -322,7 +321,7 @@ const WidgetsDropdown = () => {
         />
       </CCol>
       <CCol sm={6} lg={2}>
-        <CWidgetStatsA
+        <CWidgetStatsE
           className="mb-4 text-center"
           style={{ backgroundColor: 'rgba(250,159,27)' }}
           value={
@@ -402,7 +401,7 @@ const WidgetsDropdown = () => {
         />
       </CCol>
       <CCol sm={6} lg={4}>
-        <CWidgetStatsA
+        <CWidgetStatsE
           className="mb-4 text-center"
           style={{ backgroundColor: 'rgba(240,98,146)' }}
           value={
@@ -501,7 +500,7 @@ const WidgetsDropdown = () => {
         />
       </CCol>
       {/* <CCol sm={6} lg={4}>
-        <CWidgetStatsA
+        <CWidgetStatsE
           className="mb-4 text-center"
           style={{ backgroundColor: 'rgba(240,98,146)' }}
           value={

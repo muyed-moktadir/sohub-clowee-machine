@@ -17,17 +17,46 @@ import { cilArrowBottom, cilArrowTop, cilOptions } from '@coreui/icons'
 const WidgetsDropdown = () => {
   return (
     <CRow>
+      {/* <CCol className="mb-4" sm={6} lg={2}>
+        <div
+          className="card"
+          style={{ width: '18em', height: '150px', backgroundColor: 'rgba(13,202,240)' }}
+        >
+          <div className="card-body align-items: center">
+            <h5 className="card-title">Card title</h5>
+            <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p className="card-text"></p>
+          </div>
+        </div>
+      </CCol>
+      <CCol className="card mb-4 m" sm={6} lg={2}>
+        <div>
+          <span>20</span>
+          <h4>machine</h4>
+        </div>
+      </CCol>
+      <CCol>
+        <h1>hhgf</h1>
+      </CCol> */}
+
       <CCol sm={6} lg={2}>
         <CWidgetStatsA
-          className="mb-4 text-center"
-          color="primary"
-          title="Working Machine"
+          className="mb-4 text-center muyed"
+          style={{ backgroundColor: 'rgba(13,202,240)' }}
           value={
             <>
-              20{''}
-              {/* <span className="fs-6 fw-normal">
-                (-12.4% <CIcon icon={cilArrowBottom} />)
-              </span> */}
+              <span style={{ color: 'white' }}>20</span>
+              <h4
+                style={{
+                  fontSize: '15px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                  color: 'white',
+                }}
+              >
+                Working Machine
+              </h4>
             </>
           }
           // action={
@@ -54,7 +83,102 @@ const WidgetsDropdown = () => {
                     label: 'My First dataset',
                     backgroundColor: 'transparent',
                     borderColor: 'rgba(255,255,255,.55)',
-                    pointBackgroundColor: getStyle('--cui-primary'),
+                    pointBackgroundColor: getStyle('--cui-danger'),
+                    data: [65, 59, 84, 84, 51, 55, 40],
+                  },
+                ],
+              }}
+              options={{
+                plugins: {
+                  legend: {
+                    display: false,
+                  },
+                },
+                maintainAspectRatio: false,
+                scales: {
+                  x: {
+                    grid: {
+                      display: false,
+                      drawBorder: false,
+                    },
+                    ticks: {
+                      display: false,
+                    },
+                  },
+                  y: {
+                    min: 30,
+                    max: 89,
+                    display: false,
+                    grid: {
+                      display: false,
+                    },
+                    ticks: {
+                      display: false,
+                    },
+                  },
+                },
+                elements: {
+                  line: {
+                    borderWidth: 1,
+                    tension: 0.4,
+                  },
+                  point: {
+                    radius: 4,
+                    hitRadius: 10,
+                    hoverRadius: 4,
+                  },
+                },
+              }}
+            />
+          }
+        />
+      </CCol>
+      <CCol sm={6} lg={2}>
+        <CWidgetStatsA
+          className="mb-4 text-center h-auto"
+          style={{ backgroundColor: 'darkorchid' }}
+          value={
+            <>
+              <span style={{ color: 'white', marginLeft: '20px' }}>20</span>
+              <h4
+                style={{
+                  fontSize: '15px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                  color: 'white',
+                  marginLeft: '20px',
+                }}
+              >
+                Cloud Chances
+              </h4>
+            </>
+          }
+          // action={
+          //   <CDropdown alignment="end">
+          //     <CDropdownToggle color="transparent" caret={false} className="p-0">
+          //       <CIcon icon={cilOptions} className="text-high-emphasis-inverse" />
+          //     </CDropdownToggle>
+          //     <CDropdownMenu>
+          //       <CDropdownItem>Action</CDropdownItem>
+          //       <CDropdownItem>Another action</CDropdownItem>
+          //       <CDropdownItem>Something else here...</CDropdownItem>
+          //       <CDropdownItem disabled>Disabled action</CDropdownItem>
+          //     </CDropdownMenu>
+          //   </CDropdown>
+          // }
+          chart={
+            <CChartLine
+              className="mt-3 mx-3"
+              style={{ height: '70px' }}
+              data={{
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [
+                  {
+                    label: 'My First dataset',
+                    backgroundColor: 'transparent',
+                    borderColor: 'rgba(255,255,255,.55)',
+                    pointBackgroundColor: getStyle('--cui-gray'),
                     data: [65, 59, 84, 84, 51, 55, 40],
                   },
                 ],
@@ -107,16 +231,23 @@ const WidgetsDropdown = () => {
       <CCol sm={6} lg={2}>
         <CWidgetStatsA
           className="mb-4 text-center"
-          color="primary"
+          style={{ backgroundColor: 'rgba(171,71,188)' }}
           value={
             <>
-              20{''}
-              {/* <span className="fs-6 fw-normal">
-                (-12.4% <CIcon icon={cilArrowBottom} />)
-              </span> */}
+              <span style={{ color: 'white' }}>604</span>
+              <h4
+                style={{
+                  fontSize: '15px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                  color: 'white',
+                }}
+              >
+                Physical Chances
+              </h4>
             </>
           }
-          title="Cloud Chances"
           // action={
           //   <CDropdown alignment="end">
           //     <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -141,94 +272,7 @@ const WidgetsDropdown = () => {
                     label: 'My First dataset',
                     backgroundColor: 'transparent',
                     borderColor: 'rgba(255,255,255,.55)',
-                    pointBackgroundColor: getStyle('--cui-primary'),
-                    data: [65, 59, 84, 84, 51, 55, 40],
-                  },
-                ],
-              }}
-              options={{
-                plugins: {
-                  legend: {
-                    display: false,
-                  },
-                },
-                maintainAspectRatio: false,
-                scales: {
-                  x: {
-                    grid: {
-                      display: false,
-                      drawBorder: false,
-                    },
-                    ticks: {
-                      display: false,
-                    },
-                  },
-                  y: {
-                    min: 30,
-                    max: 89,
-                    display: false,
-                    grid: {
-                      display: false,
-                    },
-                    ticks: {
-                      display: false,
-                    },
-                  },
-                },
-                elements: {
-                  line: {
-                    borderWidth: 1,
-                    tension: 0.4,
-                  },
-                  point: {
-                    radius: 4,
-                    hitRadius: 10,
-                    hoverRadius: 4,
-                  },
-                },
-              }}
-            />
-          }
-        />
-      </CCol>
-      <CCol sm={6} lg={2}>
-        <CWidgetStatsA
-          className="mb-4 text-center"
-          color="info"
-          value={
-            <>
-              640{' '}
-              {/* <span className="fs-6 fw-normal">
-                (40.9% <CIcon icon={cilArrowTop} />)
-              </span> */}
-            </>
-          }
-          title="Physical Chances"
-          // action={
-          //   <CDropdown alignment="end">
-          //     <CDropdownToggle color="transparent" caret={false} className="p-0">
-          //       <CIcon icon={cilOptions} className="text-high-emphasis-inverse" />
-          //     </CDropdownToggle>
-          //     <CDropdownMenu>
-          //       <CDropdownItem>Action</CDropdownItem>
-          //       <CDropdownItem>Another action</CDropdownItem>
-          //       <CDropdownItem>Something else here...</CDropdownItem>
-          //       <CDropdownItem disabled>Disabled action</CDropdownItem>
-          //     </CDropdownMenu>
-          //   </CDropdown>
-          // }
-          chart={
-            <CChartLine
-              className="mt-3 mx-3"
-              style={{ height: '70px' }}
-              data={{
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [
-                  {
-                    label: 'My First dataset',
-                    backgroundColor: 'transparent',
-                    borderColor: 'rgba(255,255,255,.55)',
-                    pointBackgroundColor: getStyle('--cui-info'),
+                    pointBackgroundColor: getStyle('--cui-white'),
                     data: [1, 18, 9, 17, 34, 22, 11],
                   },
                 ],
@@ -280,16 +324,23 @@ const WidgetsDropdown = () => {
       <CCol sm={6} lg={2}>
         <CWidgetStatsA
           className="mb-4 text-center"
-          color="warning"
+          style={{ backgroundColor: 'rgba(250,159,27)' }}
           value={
             <>
-              2.49{' '}
-              {/* <span className="fs-6 fw-normal">
-                (84.7% <CIcon icon={cilArrowTop} />)
-              </span> */}
+              <span style={{ color: 'white' }}>2.49</span>
+              <h4
+                style={{
+                  fontSize: '15px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                  color: 'white',
+                }}
+              >
+                Prize Out
+              </h4>
             </>
           }
-          title="Prizes"
           // action={
           //   <CDropdown alignment="end">
           //     <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -350,19 +401,26 @@ const WidgetsDropdown = () => {
           }
         />
       </CCol>
-      <CCol sm={6} lg={2}>
+      <CCol sm={6} lg={4}>
         <CWidgetStatsA
           className="mb-4 text-center"
-          color="danger"
+          style={{ backgroundColor: 'rgba(240,98,146)' }}
           value={
             <>
-              44K{' '}
-              {/* <span className="fs-6 fw-normal">
-                (-23.6% <CIcon icon={cilArrowBottom} />)
-              </span> */}
+              <span style={{ color: 'white' }}>44K</span>
+              <h4
+                style={{
+                  fontSize: '15px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                  color: 'white',
+                }}
+              >
+                Sell (tk)
+              </h4>
             </>
           }
-          title="Sell (tk)"
           // action={
           //   <CDropdown alignment="end">
           //     <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -442,19 +500,26 @@ const WidgetsDropdown = () => {
           }
         />
       </CCol>
-      <CCol sm={6} lg={2}>
+      {/* <CCol sm={6} lg={4}>
         <CWidgetStatsA
           className="mb-4 text-center"
-          color="danger"
+          style={{ backgroundColor: 'rgba(240,98,146)' }}
           value={
             <>
-              44K{' '}
-              {/* <span className="fs-6 fw-normal">
-                (-23.6% <CIcon icon={cilArrowBottom} />)
-              </span> */}
+              <span style={{ color: 'white' }}>44K</span>
+              <h4
+                style={{
+                  fontSize: '15px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                  color: 'white',
+                }}
+              >
+                Sell (tk)
+              </h4>
             </>
           }
-          title="Sell (tk)"
           // action={
           //   <CDropdown alignment="end">
           //     <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -533,7 +598,7 @@ const WidgetsDropdown = () => {
             />
           }
         />
-      </CCol>
+      </CCol> */}
     </CRow>
   )
 }

@@ -23,29 +23,29 @@ const AppHeader = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CHeader position="sticky" className="mb-4">
+    <CHeader position="sticky" style={{ backgroundColor: '#25476a' }} className="mb-5">
       <CContainer fluid>
         <CHeaderToggler
-          className="ps-1"
+          className="ps-1 mt-4"
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
         >
-          <CIcon icon={cilMenu} size="lg" />
+          <CIcon className="text-white" icon={cilMenu} size="lg" />
         </CHeaderToggler>
         {/* <CHeaderBrand className="mx-auto d-md-none" to="/">
           <CIcon icon={logo} height={48} alt="Logo" />
         </CHeaderBrand> */}
-        <CHeaderNav className="d-none d-md-flex me-auto">
+        <CHeaderNav className="d-none d-md-flex me-auto mt-4">
           <CNavItem>
             <CNavLink to="/dashboard" component={NavLink}>
-              Dashboard
+              <span className="text-white">Dashboard</span>
             </CNavLink>
           </CNavItem>
-          <CNavItem>
+          {/* <CNavItem>
             <CNavLink href="#">Users</CNavLink>
-          </CNavItem>
-          <CNavItem>
+          </CNavItem> */}
+          {/* <CNavItem>
             <CNavLink href="#">Settings</CNavLink>
-          </CNavItem>
+          </CNavItem> */}
         </CHeaderNav>
         {/* <CHeaderNav>
           <CNavItem>
@@ -64,11 +64,11 @@ const AppHeader = () => {
             </CNavLink>
           </CNavItem>
         </CHeaderNav> */}
-        <CHeaderNav className="ms-3">
+        <CHeaderNav className="ms-3 mt-4">
           <AppHeaderDropdown />
         </CHeaderNav>
       </CContainer>
-      <CHeaderDivider />
+      {/* <CHeaderDivider /> */}
       <CContainer fluid>
         <AppBreadcrumb />
       </CContainer>

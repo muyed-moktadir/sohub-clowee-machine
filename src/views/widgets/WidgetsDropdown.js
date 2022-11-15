@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
 import {
   CRow,
   CCol,
@@ -15,6 +16,12 @@ import CIcon from '@coreui/icons-react'
 import { cilArrowBottom, cilArrowTop, cilOptions } from '@coreui/icons'
 
 const WidgetsDropdown = () => {
+  const [coin, setcoin] = useState([])
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/comments')
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+  }, [])
   return (
     <CRow>
       {/* <CCol className="mb-4" sm={6} lg={2}>
@@ -41,7 +48,7 @@ const WidgetsDropdown = () => {
 
       <CCol sm={6} lg={2}>
         <CWidgetStatsE
-          className="mb-4 text-center muyed"
+          className="mb-4 text-center"
           style={{ backgroundColor: 'rgba(13,202,240)' }}
           value={
             <>

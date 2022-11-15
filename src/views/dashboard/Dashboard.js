@@ -74,10 +74,10 @@ const Dashboard = () => {
     { title: 'Sunday', value1: 9, value2: 69 },
   ]
 
-  const progressGroupExample2 = [
-    { title: 'Male', icon: cilUser, value: 53 },
-    { title: 'Female', icon: cilUserFemale, value: 43 },
-  ]
+  // const progressGroupExample2 = [
+  //   { title: 'Male', icon: cilUser, value: 53 },
+  //   { title: 'Female', icon: cilUserFemale, value: 43 },
+  // ]
 
   // const progressGroupExample3 = [
   //   { title: 'Organic Search', icon: cibGoogle, percent: 56, value: '191,235' },

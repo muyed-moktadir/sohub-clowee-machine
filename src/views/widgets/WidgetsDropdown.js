@@ -81,7 +81,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartLine
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -175,7 +175,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartLine
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -269,7 +269,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartLine
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -442,7 +442,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartBar
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: [

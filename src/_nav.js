@@ -18,9 +18,19 @@ import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 const _nav = [
   {
     component: CNavItem,
-    name: 'Dashboard',
+    name: <span className="text-black fw-bold">Dashboard</span>,
     to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    icon: <CIcon style={{ color: 'black' }} icon={cilSpeedometer} customClassName="nav-icon" />,
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // },
+  },
+  {
+    component: CNavItem,
+    name: <span className="text-black fw-bold">Machines</span>,
+    to: '/dashboard',
+    icon: <CIcon style={{ color: 'black' }} icon={cilSpeedometer} customClassName="nav-icon" />,
     // badge: {
     //   color: 'info',
     //   text: 'NEW',
@@ -42,21 +52,20 @@ const _nav = [
   //   to: '/theme/typography',
   //   icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   // },
-  {
-    component: CNavTitle,
-    name: 'Navigation',
-  },
+  // {
+  //   component: CNavTitle,
+  // },
   {
     component: CNavGroup,
-    name: 'Machines',
+    name: <span className="text-black fw-bold">Reports</span>,
     to: '/base',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    icon: <CIcon style={{ color: 'black' }} icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
-      // {
-      //   component: CNavItem,
-      //   name: 'Accordion',
-      //   to: '/base/accordion',
-      // },
+      {
+        component: CNavItem,
+        name: 'Accordion',
+        to: '/base/accordion',
+      },
       // {
       //   component: CNavItem,
       //   name: 'Breadcrumb',
@@ -196,9 +205,9 @@ const _nav = [
   // },
   {
     component: CNavItem,
-    name: 'Charts',
+    name: <span className="text-black fw-bold">Charts</span>,
     to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+    icon: <CIcon style={{ color: 'black' }} icon={cilChartPie} customClassName="nav-icon" />,
   },
   // {
   //   component: CNavGroup,

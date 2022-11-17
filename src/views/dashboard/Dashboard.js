@@ -190,11 +190,12 @@ const Dashboard = () => {
                   <CTableHeaderCell className="text-center">
                     <CIcon icon={cilPeople} />
                   </CTableHeaderCell>
-                  <CTableHeaderCell>User</CTableHeaderCell>
-                  <CTableHeaderCell className="text-center">Country</CTableHeaderCell>
-                  <CTableHeaderCell>Usage</CTableHeaderCell>
-                  <CTableHeaderCell className="text-center">Payment Method</CTableHeaderCell>
-                  <CTableHeaderCell>Activity</CTableHeaderCell>
+                  <CTableHeaderCell>Machine </CTableHeaderCell>
+                  <CTableHeaderCell className="text-center">Cloud Chances</CTableHeaderCell>
+                  <CTableHeaderCell>Physical Chances</CTableHeaderCell>
+                  <CTableHeaderCell className="text-center"> Chances Rate</CTableHeaderCell>
+                  <CTableHeaderCell>Prizes</CTableHeaderCell>
+                  <CTableHeaderCell> Sells (tk) </CTableHeaderCell>
                 </CTableRow>
               </CTableHead>
               <CTableBody>

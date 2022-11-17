@@ -41,6 +41,7 @@ export const AppSidebarNav = ({ items }) => {
     const Component = component
     return (
       <Component
+        className="bg-white"
         idx={String(index)}
         key={index}
         toggler={navLink(name, icon)}

@@ -20,6 +20,7 @@ const _nav = [
     component: CNavItem,
     name: <span className="text-black fw-bold">Dashboard</span>,
     to: '/dashboard',
+    color: '',
     icon: <CIcon style={{ color: 'black' }} icon={cilSpeedometer} customClassName="nav-icon" />,
     // badge: {
     //   color: 'info',
@@ -63,14 +64,18 @@ const _nav = [
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
+        name: <span className="text-black fw-bold ">Machine Wise Report</span>,
         to: '/base/accordion',
       },
-      // {
-      //   component: CNavItem,
-      //   name: 'Breadcrumb',
-      //   to: '/base/breadcrumbs',
-      // },
+      {
+        component: CNavItem,
+        name: (
+          <span className="text-black fw-bold" style={{ marginTop: '-10px' }}>
+            Sales Report
+          </span>
+        ),
+        to: '/base/breadcrumbs',
+      },
       // {
       //   component: CNavItem,
       //   name: 'Cards',
@@ -205,7 +210,7 @@ const _nav = [
   // },
   {
     component: CNavItem,
-    name: <span className="text-black fw-bold">Charts</span>,
+    name: <span className="text-black fw-bold">Claw Machine Logs</span>,
     to: '/charts',
     icon: <CIcon style={{ color: 'black' }} icon={cilChartPie} customClassName="nav-icon" />,
   },

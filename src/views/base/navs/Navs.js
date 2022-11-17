@@ -23,7 +23,7 @@ const Navs = () => {
           <CCardHeader>
             <strong>React Navs</strong> <small>Base navs</small>
           </CCardHeader>
-          <CCardBody>
+          <CCardBody className="bg-white">
             <p className="text-medium-emphasis small">
               The base <code>.nav</code> component is built with flexbox and provide a strong
               foundation for building all types of navigation components. It includes some style

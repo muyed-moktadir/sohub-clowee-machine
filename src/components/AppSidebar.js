@@ -35,13 +35,15 @@ const AppSidebar = () => {
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} /> */}
       </CSidebarBrand>
       <CSidebarNav className="bg-white rounded-top">
-        <SimpleBar>
+        <SimpleBar className="bg-white rounded-top">
           <AppSidebarNav items={navigation} />
         </SimpleBar>
       </CSidebarNav>
       <CSidebarToggler
         className="d-none d-lg-flex bg-white"
-        onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
+        onClick={() =>
+          dispatch({ type: 'set', backgroundColor: 'white', sidebarUnfoldable: !unfoldable })
+        }
       />
     </CSidebar>
   )

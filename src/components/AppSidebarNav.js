@@ -25,6 +25,7 @@ export const AppSidebarNav = ({ items }) => {
     const Component = component
     return (
       <Component
+        className="bg-white"
         {...(rest.to &&
           !rest.items && {
             component: NavLink,
@@ -41,16 +42,18 @@ export const AppSidebarNav = ({ items }) => {
     const Component = component
     return (
       <Component
-        className="bg-white"
+        className="bg-bg-primary"
         idx={String(index)}
         key={index}
         toggler={navLink(name, icon)}
         visible={location.pathname.startsWith(to)}
         {...rest}
       >
-        {item.items?.map((item, index) =>
-          item.items ? navGroup(item, index) : navItem(item, index),
-        )}
+        <div className="bg-black">
+          {item.items?.map((item, index) =>
+            item.items ? navGroup(item, index) : navItem(item, index),
+          )}
+        </div>
       </Component>
     )
   }

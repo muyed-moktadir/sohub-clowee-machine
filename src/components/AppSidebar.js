@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { CNavTitle, CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/react'
@@ -19,7 +19,6 @@ const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
-
   return (
     <CSidebar
       position="fixed"
@@ -42,7 +41,7 @@ const AppSidebar = () => {
       <CSidebarToggler
         className="d-none d-lg-flex bg-white"
         onClick={() =>
-          dispatch({ type: 'set', backgroundColor: 'white', sidebarUnfoldable: !unfoldable })
+          dispatch({ type: 'set', backgroundColor: '#25476a', sidebarUnfoldable: !unfoldable })
         }
       />
     </CSidebar>

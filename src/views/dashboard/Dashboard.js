@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
   CAvatar,
@@ -56,6 +56,14 @@ import WidgetsDropdown from '../widgets/WidgetsDropdown'
 const Dashboard = () => {
   const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 
+  // TODO: json Data From Local Storage
+  const [cloweeData, setcloweeData] = useState([])
+  useEffect(() => {
+    fetch('cloweeData.json')
+      .then((res) => res.json())
+      .then((data) => setcloweeData(data))
+  }, [])
+
   const progressExample = [
     { title: 'Visits', value: '29.703 Users', percent: 40, color: 'error' },
     { title: 'Unique', value: '24.093 Users', percent: 20, color: 'info' },
@@ -87,135 +95,176 @@ const Dashboard = () => {
   // ]
 
   const tableExample = [
+    // {
+    //   avatar: { src: avatar1, status: 'success' },
+    //   user: {
+    //     name: 'Yiorgos Avraamu',
+    //     new: true,
+    //     registered: 'Jan 1, 2021',
+    //   },
+    //   country: { name: 'USA', flag: cifUs },
+    //   usage: {
+    //     value: 50,
+    //     period: 'Jun 11, 2021 - Jul 10, 2021',
+    //     color: 'success',
+    //   },
+    //   payment: { name: 'Mastercard', icon: cibCcMastercard },
+    //   activity: '10 sec ago',
+    // },
+    // {
+    //   avatar: { src: avatar2, status: 'danger' },
+    //   user: {
+    //     name: 'Avram Tarasios',
+    //     new: false,
+    //     registered: 'Jan 1, 2021',
+    //   },
+    //   country: { name: 'Brazil', flag: cifBr },
+    //   usage: {
+    //     value: 22,
+    //     period: 'Jun 11, 2021 - Jul 10, 2021',
+    //     color: 'info',
+    //   },
+    //   payment: { name: 'Visa', icon: cibCcVisa },
+    //   activity: '5 minutes ago',
+    // },
+    // {
+    //   avatar: { src: avatar3, status: 'warning' },
+    //   user: { name: 'Quintin Ed', new: true, registered: 'Jan 1, 2021' },
+    //   country: { name: 'India', flag: cifIn },
+    //   usage: {
+    //     value: 74,
+    //     period: 'Jun 11, 2021 - Jul 10, 2021',
+    //     color: 'warning',
+    //   },
+    //   payment: { name: 'Stripe', icon: cibCcStripe },
+    //   activity: '1 hour ago',
+    // },
+    // {
+    //   avatar: { src: avatar4, status: 'secondary' },
+    //   user: { name: 'Enéas Kwadwo', new: true, registered: 'Jan 1, 2021' },
+    //   country: { name: 'France', flag: cifFr },
+    //   usage: {
+    //     value: 98,
+    //     period: 'Jun 11, 2021 - Jul 10, 2021',
+    //     color: 'danger',
+    //   },
+    //   payment: { name: 'PayPal', icon: cibCcPaypal },
+    //   activity: 'Last month',
+    // },
+    // {
+    //   avatar: { src: avatar5, status: 'success' },
+    //   user: {
+    //     name: 'Agapetus Tadeáš',
+    //     new: true,
+    //     registered: 'Jan 1, 2021',
+    //   },
+    //   country: { name: 'Spain', flag: cifEs },
+    //   usage: {
+    //     value: 22,
+    //     period: 'Jun 11, 2021 - Jul 10, 2021',
+    //     color: 'primary',
+    //   },
+    //   payment: { name: 'Google Wallet', icon: cibCcApplePay },
+    //   activity: 'Last week',
+    // },
+    // {
+    //   avatar: { src: avatar6, status: 'danger' },
+    //   user: {
+    //     name: 'Friderik Dávid',
+    //     new: true,
+    //     registered: 'Jan 1, 2021',
+    //   },
+    //   country: { name: 'Poland', flag: cifPl },
+    //   usage: {
+    //     value: 43,
+    //     period: 'Jun 11, 2021 - Jul 10, 2021',
+    //     color: 'success',
+    //   },
+    //   payment: { name: 'Amex', icon: cibCcAmex },
+    //   activity: 'Last week',
+    // },
     {
-      avatar: { src: avatar1, status: 'success' },
-      user: {
-        name: 'Yiorgos Avraamu',
-        new: true,
-        registered: 'Jan 1, 2021',
+      machine: {
+        name: 'Chillox Bashundhara',
       },
-      country: { name: 'USA', flag: cifUs },
-      usage: {
-        value: 50,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'success',
+      cloudChance: {
+        value: 30,
       },
-      payment: { name: 'Mastercard', icon: cibCcMastercard },
-      activity: '10 sec ago',
+      physicalChance: {
+        value: 30,
+      },
+      rateChance: {
+        value: 30,
+      },
+      prize: {
+        value: 30,
+      },
+      sells: {
+        value: 30,
+      },
     },
     {
-      avatar: { src: avatar2, status: 'danger' },
-      user: {
-        name: 'Avram Tarasios',
-        new: false,
-        registered: 'Jan 1, 2021',
+      machine: {
+        name: 'Chillox Banani',
       },
-      country: { name: 'Brazil', flag: cifBr },
-      usage: {
-        value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'info',
+      cloudChance: {
+        value: 15,
       },
-      payment: { name: 'Visa', icon: cibCcVisa },
-      activity: '5 minutes ago',
-    },
-    {
-      avatar: { src: avatar3, status: 'warning' },
-      user: { name: 'Quintin Ed', new: true, registered: 'Jan 1, 2021' },
-      country: { name: 'India', flag: cifIn },
-      usage: {
-        value: 74,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'warning',
+      physicalChance: {
+        value: 15,
       },
-      payment: { name: 'Stripe', icon: cibCcStripe },
-      activity: '1 hour ago',
-    },
-    {
-      avatar: { src: avatar4, status: 'secondary' },
-      user: { name: 'Enéas Kwadwo', new: true, registered: 'Jan 1, 2021' },
-      country: { name: 'France', flag: cifFr },
-      usage: {
-        value: 98,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'danger',
+      rateChance: {
+        value: 15,
       },
-      payment: { name: 'PayPal', icon: cibCcPaypal },
-      activity: 'Last month',
-    },
-    {
-      avatar: { src: avatar5, status: 'success' },
-      user: {
-        name: 'Agapetus Tadeáš',
-        new: true,
-        registered: 'Jan 1, 2021',
+      prize: {
+        value: 15,
       },
-      country: { name: 'Spain', flag: cifEs },
-      usage: {
-        value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'primary',
+      sells: {
+        value: 15,
       },
-      payment: { name: 'Google Wallet', icon: cibCcApplePay },
-      activity: 'Last week',
-    },
-    {
-      avatar: { src: avatar6, status: 'danger' },
-      user: {
-        name: 'Friderik Dávid',
-        new: true,
-        registered: 'Jan 1, 2021',
-      },
-      country: { name: 'Poland', flag: cifPl },
-      usage: {
-        value: 43,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'success',
-      },
-      payment: { name: 'Amex', icon: cibCcAmex },
-      activity: 'Last week',
     },
   ]
 
   return (
     <>
       <WidgetsDropdown />
-      <CCard className="mb-4">
+      <CCard className="shadow-lg">
         <CCardBody>
           <CRow>
             {/* TODO:Add table */}
-            <CTable align="middle" className="mb-0 border" hover responsive>
-              <CTableHead color="light">
+            <CTable align="middle" className="mb-1 table" responsive>
+              <CTableHead className="border-bottom-2 border-bottom-dark" color="white">
                 <CTableRow>
-                  <CTableHeaderCell className="text-center">
+                  {/* <CTableHeaderCell className="text-center">
                     <CIcon icon={cilPeople} />
-                  </CTableHeaderCell>
-                  <CTableHeaderCell>Machine </CTableHeaderCell>
-                  <CTableHeaderCell className="text-center">Cloud Chances</CTableHeaderCell>
-                  <CTableHeaderCell>Physical Chances</CTableHeaderCell>
-                  <CTableHeaderCell className="text-center"> Chances Rate</CTableHeaderCell>
-                  <CTableHeaderCell>Prizes</CTableHeaderCell>
-                  <CTableHeaderCell> Sells (tk) </CTableHeaderCell>
+                  </CTableHeaderCell> */}
+                  <CTableHeaderCell className="text-start">Machine title </CTableHeaderCell>
+                  <CTableHeaderCell className="text-start">Cloud Chances</CTableHeaderCell>
+                  <CTableHeaderCell className="text-start">Physical Chances</CTableHeaderCell>
+                  <CTableHeaderCell className="text-start">Chances Rate</CTableHeaderCell>
+                  <CTableHeaderCell className="text-start">Prizes</CTableHeaderCell>
+                  <CTableHeaderCell className="text-start">Sells(tk) </CTableHeaderCell>
                 </CTableRow>
               </CTableHead>
               <CTableBody>
-                {tableExample.map((item, index) => (
-                  <CTableRow v-for="item in tableItems" key={index}>
-                    <CTableDataCell className="text-center">
+                {cloweeData.map((item, _id) => (
+                  <CTableRow v-for="item in tableItems" key={_id}>
+                    {/* <CTableDataCell className='text-center' className="text-center">
                       <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
-                    </CTableDataCell>
-                    <CTableDataCell>
-                      <div>{item.user.name}</div>
-                      <div className="small text-medium-emphasis">
+                    </CTableDataCell> */}
+                    <CTableDataCell className="text-start">
+                      <div>{item.name} </div>
+                      {/* <div className="small text-medium-emphasis">
                         <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
                         {item.user.registered}
-                      </div>
+                      </div> */}
                     </CTableDataCell>
-                    <CTableDataCell className="text-center">
-                      <CIcon size="xl" icon={item.country.flag} title={item.country.name} />
+                    <CTableDataCell className="text-start">
+                      {/* <CIcon size="xl" icon={item.country.flag} title={item.country.name} /> */}
+                      <div className="text-start">{item.cloudChance}</div>
                     </CTableDataCell>
-                    <CTableDataCell>
-                      <div className="clearfix">
+                    <CTableDataCell className="text-start">
+                      {/* <div className="clearfix">
                         <div className="float-start">
                           <strong>{item.usage.value}%</strong>
                         </div>
@@ -223,19 +272,34 @@ const Dashboard = () => {
                           <small className="text-medium-emphasis">{item.usage.period}</small>
                         </div>
                       </div>
-                      <CProgress thin color={item.usage.color} value={item.usage.value} />
+                      <CProgress thin color={item.usage.color} value={item.usage.value} /> */}
+
+                      <div>{item.physicalChance}</div>
+                    </CTableDataCell>
+                    <CTableDataCell className="text-start">
+                      {/* <CIcon size="xl" icon={item.payment.icon} /> */}
+                      <div>{item.rateChance}</div>
+                    </CTableDataCell>
+                    <CTableDataCell className="text-start">
+                      {/* <div className="small text-medium-emphasis">Last login</div>
+                      <strong>{item.activity}</strong> */}
+                      <div>{item.prize}</div>
                     </CTableDataCell>
                     <CTableDataCell className="text-center">
-                      <CIcon size="xl" icon={item.payment.icon} />
-                    </CTableDataCell>
-                    <CTableDataCell>
-                      <div className="small text-medium-emphasis">Last login</div>
-                      <strong>{item.activity}</strong>
+                      {/* <div className="small text-medium-emphasis">Last login</div>
+                      <strong>{item.activity}</strong> */}
+                      <div>{item.physicalChance * item.rateChance}</div>
                     </CTableDataCell>
                   </CTableRow>
                 ))}
               </CTableBody>
             </CTable>
+          </CRow>
+        </CCardBody>
+      </CCard>
+      <CCard className="mb-5 mt-4 ">
+        <CCardBody>
+          <CRow>
             <CCol sm={5}>
               <h4 id="traffic" className="card-title mb-0">
                 Traffic
@@ -359,9 +423,7 @@ const Dashboard = () => {
           </CRow>
         </CCardFooter>
       </CCard>
-
       <WidgetsBrand withCharts />
-
       <CRow>
         <CCol xs>
           <CCard className="mb-4">
@@ -451,7 +513,7 @@ const Dashboard = () => {
 
               <br />
 
-              <CTable align="middle" className="mb-0 border" hover responsive>
+              {/* <CTable align="middle" className="mb-0 border" hover responsive>
                 <CTableHead color="light">
                   <CTableRow>
                     <CTableHeaderCell className="text-center">
@@ -467,20 +529,20 @@ const Dashboard = () => {
                 <CTableBody>
                   {tableExample.map((item, index) => (
                     <CTableRow v-for="item in tableItems" key={index}>
-                      <CTableDataCell className="text-center">
+                      <CTableDataCell className='text-center' className="text-center">
                         <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
                       </CTableDataCell>
-                      <CTableDataCell>
+                      <CTableDataCell className='text-center'>
                         <div>{item.user.name}</div>
                         <div className="small text-medium-emphasis">
                           <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
                           {item.user.registered}
                         </div>
                       </CTableDataCell>
-                      <CTableDataCell className="text-center">
+                      <CTableDataCell className='text-center' className="text-center">
                         <CIcon size="xl" icon={item.country.flag} title={item.country.name} />
                       </CTableDataCell>
-                      <CTableDataCell>
+                      <CTableDataCell className='text-center'>
                         <div className="clearfix">
                           <div className="float-start">
                             <strong>{item.usage.value}%</strong>
@@ -491,17 +553,21 @@ const Dashboard = () => {
                         </div>
                         <CProgress thin color={item.usage.color} value={item.usage.value} />
                       </CTableDataCell>
-                      <CTableDataCell className="text-center">
+                      <CTableDataCell className='text-center' className="text-center">
                         <CIcon size="xl" icon={item.payment.icon} />
                       </CTableDataCell>
-                      <CTableDataCell>
+                      <CTableDataCell className='text-center'>
                         <div className="small text-medium-emphasis">Last login</div>
                         <strong>{item.activity}</strong>
                       </CTableDataCell>
                     </CTableRow>
                   ))}
                 </CTableBody>
-              </CTable>
+              </CTable> */}
+            </CCardBody>
+
+            <CCardBody>
+              <h4>kjahskd</h4>
             </CCardBody>
           </CCard>
         </CCol>

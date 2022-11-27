@@ -29,6 +29,18 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: <span className="text-black fw-bold">Machine Daily Report</span>,
+    to: '/machinesdailyreport',
+    color: '',
+    icon: <CIcon style={{ color: 'black' }} icon={cilSpeedometer} customClassName="nav-icon" />,
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // },
+  },
+
+  {
+    component: CNavItem,
     name: <span className="text-black fw-bold">Machines</span>,
     to: '/dashboard',
     icon: <CIcon style={{ color: 'black' }} icon={cilSpeedometer} customClassName="nav-icon" />,

@@ -1,0 +1,52 @@
+[
+    {
+      "_id": "637b0787468996d09793b859",
+      "name": "TFC Gazipur",
+      "workingMachine": 3,
+      "cloudChance": 11,
+      "physicalChance": 12,
+      "rateChance": 70,
+      "prize": 5,
+      "address":"Joydevpur road, Gazipur"
+    },
+    {
+      "_id": "637b0787e52324f6a97d2997",
+      "name": "TFC Narayanganj",
+      "workingMachine": 3,
+      "cloudChance": 24,
+      "physicalChance": 29,
+      "rateChance": 30,
+      "prize": 10,
+      "address":"Chasara, Narayanganj"
+    },
+    {
+      "_id": "637b078709770f9a0a9fc8d2",
+      "workingMachine": 3,
+      "name": "Hoi Choi Dhanmondi Lake",
+      "cloudChance": 13,
+      "physicalChance": 27,
+      "rateChance": 5,
+      "prize": 5,
+      "address":"12A, Dhanmondi Lake"
+    },
+    {
+      "_id": "637b0787c09669c10a5c4036",
+      "workingMachine": 3,
+      "name": "Chillox Banani",
+      "cloudChance": 19,
+      "physicalChance": 19,
+      "rateChance": 15,
+      "prize": 10,
+      "address":"kamal Attaturk Ave., Banani, Dhaka"
+    },
+    {
+      "_id": "637b07871f0a4b73470ae8c7",
+      "workingMachine": 3,
+      "name": "Chillox Bashundhara",
+      "cloudChance": 22,
+      "physicalChance": 18,
+      "rateChance": 35,
+      "prize": 6,
+      "address":"Bashundhara Gate, Bashundhara"
+    }
+  ]

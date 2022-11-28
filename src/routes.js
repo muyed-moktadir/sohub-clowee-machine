@@ -5,8 +5,11 @@ const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 // const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
 // Base
-// const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
-// const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
+const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
+const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
+const MachinesDailyReport = React.lazy(() =>
+  import('./views/pages/MachineDailyReport/MachinesDailyReport'),
+)
 // const Cards = React.lazy(() => import('./views/base/cards/Cards'))
 // const Carousels = React.lazy(() => import('./views/base/carousels/Carousels'))
 // const Collapses = React.lazy(() => import('./views/base/collapses/Collapses'))
@@ -47,18 +50,20 @@ const Alerts = React.lazy(() => import('./views/notifications/alerts/Alerts'))
 const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
+// const MachinesDailyChart = React.lazy(() => import('./views/dashboard/Dashboard'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const routes = [
   { path: '/', exact: true },
   { path: '/dashboard', element: Dashboard },
+  // { path: '/dashboard', element: Report },
   // { path: '/theme', name: 'Theme', element: Colors, exact: true },
   // { path: '/theme/colors', name: 'Colors', element: Colors },
   // { path: '/theme/typography', name: 'Typography', element: Typography },
   // { path: '/base', name: 'Base', element: Cards, exact: true },
-  // { path: '/base/accordion', name: 'Accordion', element: Accordion },
-  // { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },
+  { path: '/base/accordion', name: 'Accordion', element: Accordion },
+  { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },
   // { path: '/base/cards', name: 'Cards', element: Cards },
   // { path: '/base/carousels', name: 'Carousel', element: Carousels },
   // { path: '/base/collapses', name: 'Collapse', element: Collapses },
@@ -78,6 +83,7 @@ const routes = [
   { path: '/charts', name: 'Charts', element: Charts },
   { path: '/forms', name: 'Forms', element: FormControl, exact: true },
   { path: '/forms/form-control', name: 'Form Control', element: FormControl },
+  { path: '/machinesdailyreport', name: 'Machines Daily Report', element: MachinesDailyReport },
   // { path: '/forms/select', name: 'Select', element: Select },
   // { path: '/forms/checks-radios', name: 'Checks & Radios', element: ChecksRadios },
   // { path: '/forms/range', name: 'Range', element: Range },
@@ -95,6 +101,8 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
+  //Machine Daily Report(Area Ghraph)
+  // { path: '/machines', name: 'MachinesDailyChart', element: MachinesDailyChart },
 ]
 
 export default routes

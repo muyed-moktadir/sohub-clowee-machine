@@ -16,11 +16,11 @@ import CIcon from '@coreui/icons-react'
 import { cilArrowBottom, cilArrowTop, cilOptions } from '@coreui/icons'
 
 const WidgetsDropdown = () => {
-  const [coin, setcoin] = useState([])
+  const [cloweeData, setcloweeData] = useState([])
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/comments')
+    fetch('cloweeData.json')
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => setcloweeData(data))
   }, [])
   return (
     <CRow>
@@ -45,6 +45,7 @@ const WidgetsDropdown = () => {
       <CCol>
         <h1>hhgf</h1>
       </CCol> */}
+      {/* {cloweeData.map()} */}
 
       <CCol sm={6} lg={2}>
         <CWidgetStatsE
@@ -52,7 +53,7 @@ const WidgetsDropdown = () => {
           style={{ backgroundColor: 'rgba(13,202,240)' }}
           value={
             <>
-              <span style={{ color: 'white' }}>20</span>
+              <span style={{ color: 'white', fontSize: '30px' }}>20</span>
               <h4
                 style={{
                   fontSize: '15px',
@@ -81,7 +82,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartLine
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -146,7 +147,7 @@ const WidgetsDropdown = () => {
           style={{ backgroundColor: 'darkorchid' }}
           value={
             <>
-              <span style={{ color: 'white' }}>20</span>
+              <span style={{ color: 'white', fontSize: '30px' }}>20</span>
               <h4
                 style={{
                   fontSize: '15px',
@@ -175,7 +176,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartLine
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -240,7 +241,7 @@ const WidgetsDropdown = () => {
           style={{ backgroundColor: 'rgba(171,71,188)' }}
           value={
             <>
-              <span style={{ color: 'white' }}>604</span>
+              <span style={{ color: 'white', fontSize: '30px' }}>604</span>
               <h4
                 style={{
                   fontSize: '15px',
@@ -269,7 +270,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartLine
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -333,7 +334,7 @@ const WidgetsDropdown = () => {
           style={{ backgroundColor: 'rgba(250,159,27)' }}
           value={
             <>
-              <span style={{ color: 'white' }}>2.49</span>
+              <span style={{ color: 'white', fontSize: '30px' }}>2.49</span>
               <h4
                 style={{
                   fontSize: '15px',
@@ -413,7 +414,7 @@ const WidgetsDropdown = () => {
           style={{ backgroundColor: 'rgba(240,98,146)' }}
           value={
             <>
-              <span style={{ color: 'white' }}>44K</span>
+              <span style={{ color: 'white', fontSize: '30px' }}>44K</span>
               <h4
                 style={{
                   fontSize: '15px',
@@ -442,7 +443,7 @@ const WidgetsDropdown = () => {
           // }
           chart={
             <CChartBar
-              className="mt-3 mx-3"
+              className="mt-3"
               style={{ height: '70px' }}
               data={{
                 labels: [
@@ -512,7 +513,7 @@ const WidgetsDropdown = () => {
           style={{ backgroundColor: 'rgba(240,98,146)' }}
           value={
             <>
-              <span style={{ color: 'white' }}>44K</span>
+              <span style={{ color: 'white', fontSize: '30px' }}>44K</span>
               <h4
                 style={{
                   fontSize: '15px',

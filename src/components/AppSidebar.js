@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { CNavTitle, CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/react'
@@ -19,7 +19,6 @@ const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
-
   return (
     <CSidebar
       position="fixed"
@@ -29,18 +28,21 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
+      <CSidebarBrand className="d-none d-md-flex" style={{ backgroundColor: '#25476a' }} to="/">
+        <h4 className="text-white">Clowee</h4>
         {/* <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} /> */}
       </CSidebarBrand>
-      <CSidebarNav>
-        <SimpleBar>
+      <CSidebarNav className="bg-white rounded-top">
+        <SimpleBar className="bg-white rounded-top">
           <AppSidebarNav items={navigation} />
         </SimpleBar>
       </CSidebarNav>
       <CSidebarToggler
-        className="d-none d-lg-flex"
-        onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
+        className="d-none d-lg-flex bg-white"
+        onClick={() =>
+          dispatch({ type: 'set', backgroundColor: '#25476a', sidebarUnfoldable: !unfoldable })
+        }
       />
     </CSidebar>
   )
